@@ -1,0 +1,130 @@
+{
+  "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+  "url": "data.csv",
+  "dc:title": "QualisBrasil",
+  "dcat:keyword": [ "QualisBrasil" ],
+  "dc:description": [
+    "History of Qualis Index.",
+    { "@value": "Histórico do Índice qualis.", "@language": "pt" }
+  ],
+  "dc:publisher": { "schema:name": "Unicentro",  "schema:url": { "@id": "https://www3.unicentro.br/" } },
+  "dc:license": [ { "@id": "https://creativecommons.org/licenses/by-sa/3.0/legalcode" } ],
+  "dc:issued": {"@type": "xsd:date", "@value": "2018-08-06" },
+  "dc:modified": {"@type": "xsd:date", "@value": "2019-05-08" },
+  "dialect": {"trim": true},
+  "tableSchema": {
+    "columns": [{
+      "name": "Evaluation",
+      "titles": [ "Evaluation", "Avaliação" ],
+      "dc:description": [
+        "Class that represents a Qualis evaluation, relating a journal, an area of knowledge, the year and the prestige stratum.",
+        { "@value": "Classe que representa uma avaliação Qualis, relacionando uma revista, a área de conhecimento, o ano e o estrato alcançado.", "@language": "pt" }
+      ],
+      "datatype": "anyURI",
+      "required": true,
+      "suppressOutput": true
+    }, {
+      "name": "Journal",
+      "titles": [ "Journal", "Revista" ],
+      "dc:description": [
+        "Reused class of Bibliographic Ontological Specification.",
+        { "@value": "Classe reutilizada da Bibliografic Ontology Specification.", "@language": "pt" }
+      ],
+      "datatype": "anyURI",
+      "required": true,
+      "suppressOutput": true
+    }, {
+      "name": "issnJournal",
+      "titles": [ "issnJournal", "Journal ISSN", "ISSN da Revista" ],
+      "dc:description": [
+        "Data property of the Bibliografic Ontology Specification.",
+        { "@value": "Propriedade de dados da Bibliografic Ontology Specification.", "@language": "pt" }
+      ],
+      "propertyUrl": "http://purl.org/ontology/bibo/issn",
+      "datatype": "string",
+      "required": true
+    }, {
+      "name": "nameJournal",
+      "titles": [ "nameJournal", "Journal Name", "Nome da Revista" ],
+      "dc:description": [
+        "Data property of the Bibliografic Ontology Specification.",
+        { "@value": "Propriedade de dados da Bibliografic Ontology Specification.", "@language": "pt" }
+      ],
+      "datatype": "string",
+      "propertyUrl": "foaf:name",
+      "required": true
+    }, {
+      "name": "KnowledgeField",
+      "titles": [ "KnowledgeField", "Campo de Conhecimento" ],
+      "dc:description": [
+        "Class that represents an area of evaluation, relating the code of identification of the area and the name, according to the National Council of Research - CNPq.",
+        { "@value": "Classe que representa uma área de avaliação, relacionando o código de identificação da área e o nome, segundo o Conselho Nacional de Pesquisa - CNPq.", "@language": "pt" }
+      ],
+      "datatype": "anyURI",
+      "required": true,
+      "suppressOutput": true
+    }, {
+      "name": "idKnowledgeField",
+      "titles": [ "idKnowledgeField", "KnowledgeField ID", "ID do Campo de Conhecimento" ],
+      "dc:description": [
+        "Data property used to identify the area of knowledge according to CNPq.",
+        { "@value": "Propriedade de dados utilizada para identificar a área de conhecimento segundo o CNPq.", "@language": "pt" }
+      ],
+      "datatype": "positiveInteger",
+      "propertyUrl": "dc:identifier",
+      "required": true
+    }, {
+      "name": "nameKnowledgeField",
+      "titles": [ "nameKnowledgeField", "KnowledgeField Name", "Nome do Campo de Conhecimento" ],
+      "dc:description": [
+        "Data property used to name the area of knowledge according to CNPq.",
+        { "@value": "Propriedade de dados utilizada para nomear a área de conhecimento segundo o CNPq.", "@language": "pt" }
+      ],
+      "datatype": "string",
+      "propertyUrl": "dc:title",
+      "required": true
+    }, {
+      "name": "yearEvaluation",
+      "titles": [ "yearEvaluation", "Year Evaluation", "Ano de Avaliação" ],
+      "dc:description": [
+        "Class representing the evaluation years of the Qualis Index.",
+        { "@value": "Classe que representa os anos de avaliação do Índice Qualis.", "@language": "pt" }
+      ],
+      "datatype": "anyURI",
+      "required": true,
+      "suppressOutput": true
+    }, {
+      "name": "yearIndex",
+      "titles": [ "yearIndex", "Year", "Ano" ],
+      "dc:description": [
+        "Data property to assign values to the valuation year.",
+        { "@value": "Propriedade de dados para atribuir valores para o ano de avaliação.", "@language": "pt" }
+      ],
+      "propertyUrl": "#year",
+      "datatype": "positiveInteger",
+      "required": true
+    }, {
+      "name": "Qualis",
+      "titles": [ "Qualis" ],
+      "dc:description": [
+        "Class that represents the Qualis strata.",
+        { "@value": "Classe que representa os estratos Qualis.", "@language": "pt" }
+      ],
+      "datatype": "anyURI",
+      "required": true,
+      "suppressOutput": true
+    }, {
+      "name": "qualisIndex",
+      "titles": [ "qualisIndex", "Qualis Index", "Score", "Índice Qualis", "Avaliação" ],
+      "dc:description": [
+        "Property data to assign values to the Qualis stratum.",
+        { "@value": "Propriedade de dados para atribuir valores para o estrato Qualis.", "@language": "pt" }
+      ],
+      "propertyUrl": "#score",
+      "datatype": "string",
+      "required": true
+    }],
+    "primaryKey": "Evaluation",
+    "aboutUrl": "#evaluation={Evaluation}"
+  }
+}
