@@ -1,6 +1,6 @@
 {
   "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
-  "url": "data.csv",
+  "url": "data_normalized.csv",
   "dc:title": "QualisBrasil",
   "dcat:keyword": [ "QualisBrasil" ],
   "dc:description": [
@@ -31,8 +31,9 @@
         { "@value": "Classe reutilizada da Bibliografic Ontology Specification.", "@language": "pt" }
       ],
       "datatype": "anyURI",
-      "required": true,
-      "suppressOutput": true
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#journal",
+      "valueUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#journal={Journal}",
+      "required": true
     }, {
       "name": "issnJournal",
       "titles": [ "issnJournal", "Journal ISSN", "ISSN da Revista" ],
@@ -40,8 +41,9 @@
         "Data property of the Bibliografic Ontology Specification.",
         { "@value": "Propriedade de dados da Bibliografic Ontology Specification.", "@language": "pt" }
       ],
-      "propertyUrl": "http://purl.org/ontology/bibo/issn",
       "datatype": "string",
+      "propertyUrl": "http://purl.org/ontology/bibo/issn",
+      "aboutUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#journal={Journal}",
       "required": true
     }, {
       "name": "nameJournal",
@@ -52,6 +54,7 @@
       ],
       "datatype": "string",
       "propertyUrl": "foaf:name",
+      "aboutUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#journal={Journal}",
       "required": true
     }, {
       "name": "KnowledgeField",
@@ -61,8 +64,9 @@
         { "@value": "Classe que representa uma área de avaliação, relacionando o código de identificação da área e o nome, segundo o Conselho Nacional de Pesquisa - CNPq.", "@language": "pt" }
       ],
       "datatype": "anyURI",
-      "required": true,
-      "suppressOutput": true
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#knowledgeField",
+      "valueUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#knowledgeField={KnowledgeField}",
+      "required": true
     }, {
       "name": "idKnowledgeField",
       "titles": [ "idKnowledgeField", "KnowledgeField ID", "ID do Campo de Conhecimento" ],
@@ -72,6 +76,7 @@
       ],
       "datatype": "positiveInteger",
       "propertyUrl": "dc:identifier",
+      "aboutUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#knowledgeField={KnowledgeField}",
       "required": true
     }, {
       "name": "nameKnowledgeField",
@@ -82,6 +87,7 @@
       ],
       "datatype": "string",
       "propertyUrl": "dc:title",
+      "aboutUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#knowledgeField={KnowledgeField}",
       "required": true
     }, {
       "name": "yearEvaluation",
@@ -91,8 +97,9 @@
         { "@value": "Classe que representa os anos de avaliação do Índice Qualis.", "@language": "pt" }
       ],
       "datatype": "anyURI",
-      "required": true,
-      "suppressOutput": true
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#yearEvaluation",
+      "valueUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#yearEvaluation={yearEvaluation}",
+      "required": true
     }, {
       "name": "yearIndex",
       "titles": [ "yearIndex", "Year", "Ano" ],
@@ -100,8 +107,9 @@
         "Data property to assign values to the valuation year.",
         { "@value": "Propriedade de dados para atribuir valores para o ano de avaliação.", "@language": "pt" }
       ],
-      "propertyUrl": "#year",
       "datatype": "positiveInteger",
+      "propertyUrl": "rdf:value",
+      "aboutUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#yearEvaluation={yearEvaluation}",
       "required": true
     }, {
       "name": "Qualis",
@@ -111,8 +119,9 @@
         { "@value": "Classe que representa os estratos Qualis.", "@language": "pt" }
       ],
       "datatype": "anyURI",
-      "required": true,
-      "suppressOutput": true
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#qualis",
+      "valueUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#qualis={Qualis}",
+      "required": true
     }, {
       "name": "qualisIndex",
       "titles": [ "qualisIndex", "Qualis Index", "Score", "Índice Qualis", "Avaliação" ],
@@ -120,11 +129,12 @@
         "Property data to assign values to the Qualis stratum.",
         { "@value": "Propriedade de dados para atribuir valores para o estrato Qualis.", "@language": "pt" }
       ],
-      "propertyUrl": "#score",
+      "propertyUrl": "rdf:value",
+      "aboutUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#qualis={Qualis}",
       "datatype": "string",
       "required": true
     }],
     "primaryKey": "Evaluation",
-    "aboutUrl": "#evaluation={Evaluation}"
+    "aboutUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#evaluation={Evaluation}"
   }
 }

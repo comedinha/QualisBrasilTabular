@@ -21,6 +21,7 @@
         { "@value": "Classe que representa uma avaliação Qualis, relacionando uma revista, a área de conhecimento, o ano e o estrato alcançado.", "@language": "pt" }
       ],
       "datatype": "anyURI",
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularCsv/qualis.csv#Evaluation",
       "required": true
     }, {
       "name": "Journal",
@@ -30,6 +31,7 @@
         { "@value": "Classe reutilizada da Bibliografic Ontology Specification.", "@language": "pt" }
       ],
       "datatype": "anyURI",
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularCsv/qualis.csv#Journal",
       "required": true
     }, {
       "name": "issnJournal",
@@ -39,6 +41,7 @@
         { "@value": "Propriedade de dados da Bibliografic Ontology Specification.", "@language": "pt" }
       ],
       "datatype": "string",
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularCsv/qualis.csv#issnJournal",
       "required": true
     }, {
       "name": "nameJournal",
@@ -48,6 +51,7 @@
         { "@value": "Propriedade de dados da Bibliografic Ontology Specification.", "@language": "pt" }
       ],
       "datatype": "string",
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularCsv/qualis.csv#nameJournal",
       "required": true
     }, {
       "name": "KnowledgeField",
@@ -57,6 +61,7 @@
         { "@value": "Classe que representa uma área de avaliação, relacionando o código de identificação da área e o nome, segundo o Conselho Nacional de Pesquisa - CNPq.", "@language": "pt" }
       ],
       "datatype": "anyURI",
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularCsv/qualis.csv#KnowledgeField",
       "required": true
     }, {
       "name": "idKnowledgeField",
@@ -66,6 +71,7 @@
         { "@value": "Propriedade de dados utilizada para identificar a área de conhecimento segundo o CNPq.", "@language": "pt" }
       ],
       "datatype": "positiveInteger",
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularCsv/qualis.csv#idKnowledgeField",
       "required": true
     }, {
       "name": "nameKnowledgeField",
@@ -75,6 +81,7 @@
         { "@value": "Propriedade de dados utilizada para nomear a área de conhecimento segundo o CNPq.", "@language": "pt" }
       ],
       "datatype": "string",
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularCsv/qualis.csv#nameKnowledgeField",
       "required": true
     }, {
       "name": "yearEvaluation",
@@ -83,7 +90,8 @@
         "Class representing the evaluation years of the Qualis Index.",
         { "@value": "Classe que representa os anos de avaliação do Índice Qualis.", "@language": "pt" }
       ],
-      "datatype": "positiveInteger",
+      "datatype": "anyURI",
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularCsv/qualis.csv#yearEvaluation",
       "required": true
     }, {
       "name": "yearIndex",
@@ -92,7 +100,8 @@
         "Data property to assign values to the valuation year.",
         { "@value": "Propriedade de dados para atribuir valores para o ano de avaliação.", "@language": "pt" }
       ],
-      "datatype": "gYear",
+      "datatype": "positiveInteger",
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularCsv/qualis.csv#yearIndex",
       "required": true
     }, {
       "name": "Qualis",
@@ -102,6 +111,7 @@
         { "@value": "Classe que representa os estratos Qualis.", "@language": "pt" }
       ],
       "datatype": "anyURI",
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularCsv/qualis.csv#Qualis",
       "required": true
     }, {
       "name": "qualisIndex",
@@ -111,9 +121,10 @@
         { "@value": "Propriedade de dados para atribuir valores para o estrato Qualis.", "@language": "pt" }
       ],
       "datatype": "string",
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularCsv/qualis.csv#qualisIndex",
       "required": true
     }],
     "primaryKey": "Evaluation",
-    "aboutUrl": "#evaluation={_row}"
+    "aboutUrl": "http://lod.unicentro.br/QualisBrasil/TabularCsv/qualis.csv#row={_row}"
   }
 }

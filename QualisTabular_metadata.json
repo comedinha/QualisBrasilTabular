@@ -1,6 +1,6 @@
 {
   "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
-  "url": "data_normalized.csv",
+  "url": "data.csv",
   "dc:title": "QualisBrasil",
   "dcat:keyword": [ "QualisBrasil" ],
   "dc:description": [
@@ -31,9 +31,8 @@
         { "@value": "Classe reutilizada da Bibliografic Ontology Specification.", "@language": "pt" }
       ],
       "datatype": "anyURI",
-      "propertyUrl": "#journal",
-      "valueUrl": "#jounal-{Journal}",
-      "required": true
+      "required": true,
+      "suppressOutput": true
     }, {
       "name": "issnJournal",
       "titles": [ "issnJournal", "Journal ISSN", "ISSN da Revista" ],
@@ -41,9 +40,8 @@
         "Data property of the Bibliografic Ontology Specification.",
         { "@value": "Propriedade de dados da Bibliografic Ontology Specification.", "@language": "pt" }
       ],
-      "datatype": "string",
       "propertyUrl": "http://purl.org/ontology/bibo/issn",
-      "aboutUrl": "#jounal-{Journal}",
+      "datatype": "string",
       "required": true
     }, {
       "name": "nameJournal",
@@ -54,7 +52,6 @@
       ],
       "datatype": "string",
       "propertyUrl": "foaf:name",
-      "aboutUrl": "#jounal-{Journal}",
       "required": true
     }, {
       "name": "KnowledgeField",
@@ -64,9 +61,8 @@
         { "@value": "Classe que representa uma área de avaliação, relacionando o código de identificação da área e o nome, segundo o Conselho Nacional de Pesquisa - CNPq.", "@language": "pt" }
       ],
       "datatype": "anyURI",
-      "propertyUrl": "#knowledgeField",
-      "valueUrl": "#knowledgeField-{KnowledgeField}",
-      "required": true
+      "required": true,
+      "suppressOutput": true
     }, {
       "name": "idKnowledgeField",
       "titles": [ "idKnowledgeField", "KnowledgeField ID", "ID do Campo de Conhecimento" ],
@@ -75,7 +71,7 @@
         { "@value": "Propriedade de dados utilizada para identificar a área de conhecimento segundo o CNPq.", "@language": "pt" }
       ],
       "datatype": "positiveInteger",
-      "aboutUrl": "#knowledgeField-{KnowledgeField}",
+      "propertyUrl": "dc:identifier",
       "required": true
     }, {
       "name": "nameKnowledgeField",
@@ -86,7 +82,6 @@
       ],
       "datatype": "string",
       "propertyUrl": "dc:title",
-      "aboutUrl": "#knowledgeField-{KnowledgeField}",
       "required": true
     }, {
       "name": "yearEvaluation",
@@ -96,9 +91,8 @@
         { "@value": "Classe que representa os anos de avaliação do Índice Qualis.", "@language": "pt" }
       ],
       "datatype": "anyURI",
-      "propertyUrl": "#yearEvaluation",
-      "valueUrl": "#yearEvaluation-{yearEvaluation}",
-      "required": true
+      "required": true,
+      "suppressOutput": true
     }, {
       "name": "yearIndex",
       "titles": [ "yearIndex", "Year", "Ano" ],
@@ -106,9 +100,8 @@
         "Data property to assign values to the valuation year.",
         { "@value": "Propriedade de dados para atribuir valores para o ano de avaliação.", "@language": "pt" }
       ],
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/Tabular#year",
       "datatype": "positiveInteger",
-      "propertyUrl": "rdf:value",
-      "aboutUrl": "#yearEvaluation-{yearEvaluation}",
       "required": true
     }, {
       "name": "Qualis",
@@ -118,9 +111,8 @@
         { "@value": "Classe que representa os estratos Qualis.", "@language": "pt" }
       ],
       "datatype": "anyURI",
-      "propertyUrl": "#qualis",
-      "valueUrl": "#qualis-{Qualis}",
-      "required": true
+      "required": true,
+      "suppressOutput": true
     }, {
       "name": "qualisIndex",
       "titles": [ "qualisIndex", "Qualis Index", "Score", "Índice Qualis", "Avaliação" ],
@@ -128,12 +120,11 @@
         "Property data to assign values to the Qualis stratum.",
         { "@value": "Propriedade de dados para atribuir valores para o estrato Qualis.", "@language": "pt" }
       ],
-      "propertyUrl": "rdf:value",
-      "aboutUrl": "#qualis-{Qualis}",
+      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/Tabular#score",
       "datatype": "string",
       "required": true
     }],
     "primaryKey": "Evaluation",
-    "aboutUrl": "#evaluation={Evaluation}"
+    "aboutUrl": "http://lod.unicentro.br/QualisBrasil/Tabular/Evaluation/{Evaluation}"
   }
 }
