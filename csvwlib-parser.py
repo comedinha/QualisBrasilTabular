@@ -1,8 +1,3 @@
-import sys
-import os
-import json
-
-from io import StringIO
 from csvwlib import CSVWConverter
 from rdflib import Graph, URIRef
 
