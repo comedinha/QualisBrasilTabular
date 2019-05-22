@@ -1,6 +1,7 @@
 {
   "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
-  "url": "data_normalized.csv",
+  "@id": "http://lod.unicentro.br/QualisBrasil/TabularNormalized/",
+  "url": "data.csv",
   "dc:title": "QualisBrasil",
   "dcat:keyword": [ "QualisBrasil" ],
   "dc:description": [
@@ -9,8 +10,8 @@
   ],
   "dc:publisher": { "schema:name": "Unicentro",  "schema:url": { "@id": "https://www3.unicentro.br/" } },
   "dc:license": [ { "@id": "https://creativecommons.org/licenses/by-sa/3.0/legalcode" } ],
-  "dc:issued": {"@type": "xsd:date", "@value": "2018-08-06" },
-  "dc:modified": {"@type": "xsd:date", "@value": "2019-05-08" },
+  "dc:issued": {"@type": "xsd:date", "@value": "2019-05-08" },
+  "dc:modified": {"@type": "xsd:date", "@value": "2019-05-22" },
   "dialect": {"trim": true},
   "tableSchema": {
     "columns": [{
@@ -31,8 +32,8 @@
         { "@value": "Classe reutilizada da Bibliografic Ontology Specification.", "@language": "pt" }
       ],
       "datatype": "anyURI",
-      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#journal",
-      "valueUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#journal={Journal}",
+      "propertyUrl": "#journal",
+      "valueUrl": "#journal={Journal}",
       "required": true
     }, {
       "name": "issnJournal",
@@ -43,7 +44,7 @@
       ],
       "datatype": "string",
       "propertyUrl": "http://purl.org/ontology/bibo/issn",
-      "aboutUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#journal={Journal}",
+      "aboutUrl": "#journal={Journal}",
       "required": true
     }, {
       "name": "nameJournal",
@@ -54,7 +55,7 @@
       ],
       "datatype": "string",
       "propertyUrl": "foaf:name",
-      "aboutUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#journal={Journal}",
+      "aboutUrl": "#journal={Journal}",
       "required": true
     }, {
       "name": "KnowledgeField",
@@ -64,8 +65,8 @@
         { "@value": "Classe que representa uma área de avaliação, relacionando o código de identificação da área e o nome, segundo o Conselho Nacional de Pesquisa - CNPq.", "@language": "pt" }
       ],
       "datatype": "anyURI",
-      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#knowledgeField",
-      "valueUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#knowledgeField={KnowledgeField}",
+      "propertyUrl": "#knowledgeField",
+      "valueUrl": "#knowledgeField={KnowledgeField}",
       "required": true
     }, {
       "name": "idKnowledgeField",
@@ -76,7 +77,7 @@
       ],
       "datatype": "positiveInteger",
       "propertyUrl": "dc:identifier",
-      "aboutUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#knowledgeField={KnowledgeField}",
+      "aboutUrl": "#knowledgeField={KnowledgeField}",
       "required": true
     }, {
       "name": "nameKnowledgeField",
@@ -87,7 +88,7 @@
       ],
       "datatype": "string",
       "propertyUrl": "dc:title",
-      "aboutUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#knowledgeField={KnowledgeField}",
+      "aboutUrl": "#knowledgeField={KnowledgeField}",
       "required": true
     }, {
       "name": "yearEvaluation",
@@ -97,8 +98,8 @@
         { "@value": "Classe que representa os anos de avaliação do Índice Qualis.", "@language": "pt" }
       ],
       "datatype": "anyURI",
-      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#yearEvaluation",
-      "valueUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#yearEvaluation={yearEvaluation}",
+      "propertyUrl": "#yearEvaluation",
+      "valueUrl": "#yearEvaluation={yearEvaluation}",
       "required": true
     }, {
       "name": "yearIndex",
@@ -109,7 +110,7 @@
       ],
       "datatype": "positiveInteger",
       "propertyUrl": "rdf:value",
-      "aboutUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#yearEvaluation={yearEvaluation}",
+      "aboutUrl": "#yearEvaluation={yearEvaluation}",
       "required": true
     }, {
       "name": "Qualis",
@@ -119,8 +120,8 @@
         { "@value": "Classe que representa os estratos Qualis.", "@language": "pt" }
       ],
       "datatype": "anyURI",
-      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#qualis",
-      "valueUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#qualis={Qualis}",
+      "propertyUrl": "#score",
+      "valueUrl": "#score={Qualis}",
       "required": true
     }, {
       "name": "qualisIndex",
@@ -130,11 +131,11 @@
         { "@value": "Propriedade de dados para atribuir valores para o estrato Qualis.", "@language": "pt" }
       ],
       "propertyUrl": "rdf:value",
-      "aboutUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#qualis={Qualis}",
+      "aboutUrl": "#score={Qualis}",
       "datatype": "string",
       "required": true
     }],
     "primaryKey": "Evaluation",
-    "aboutUrl": "http://lod.unicentro.br/QualisBrasil/TabularNormalized#evaluation={Evaluation}"
+    "aboutUrl": "#evaluation={Evaluation}"
   }
 }

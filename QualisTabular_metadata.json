@@ -1,5 +1,6 @@
 {
   "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+  "@id": "http://lod.unicentro.br/QualisBrasil/Tabular/",
   "url": "data.csv",
   "dc:title": "QualisBrasil",
   "dcat:keyword": [ "QualisBrasil" ],
@@ -9,8 +10,8 @@
   ],
   "dc:publisher": { "schema:name": "Unicentro",  "schema:url": { "@id": "https://www3.unicentro.br/" } },
   "dc:license": [ { "@id": "https://creativecommons.org/licenses/by-sa/3.0/legalcode" } ],
-  "dc:issued": {"@type": "xsd:date", "@value": "2018-08-06" },
-  "dc:modified": {"@type": "xsd:date", "@value": "2019-05-08" },
+  "dc:issued": {"@type": "xsd:date", "@value": "2019-05-08" },
+  "dc:modified": {"@type": "xsd:date", "@value": "2019-05-22" },
   "dialect": {"trim": true},
   "tableSchema": {
     "columns": [{
@@ -100,7 +101,7 @@
         "Data property to assign values to the valuation year.",
         { "@value": "Propriedade de dados para atribuir valores para o ano de avaliação.", "@language": "pt" }
       ],
-      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/Tabular#year",
+      "propertyUrl": "#yearEvaluation",
       "datatype": "positiveInteger",
       "required": true
     }, {
@@ -120,11 +121,11 @@
         "Property data to assign values to the Qualis stratum.",
         { "@value": "Propriedade de dados para atribuir valores para o estrato Qualis.", "@language": "pt" }
       ],
-      "propertyUrl": "http://lod.unicentro.br/QualisBrasil/Tabular#score",
+      "propertyUrl": "#score",
       "datatype": "string",
       "required": true
     }],
     "primaryKey": "Evaluation",
-    "aboutUrl": "http://lod.unicentro.br/QualisBrasil/Tabular/Evaluation/{Evaluation}"
+    "aboutUrl": "#evaluation={Evaluation}"
   }
 }
